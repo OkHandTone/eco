@@ -25,7 +25,7 @@ Product = bdd.define('Product', {
     },
     picture: {
         type: DataTypes.STRING(2083),
-        allowNull: false
+        allowNull: true
     },
 
 });
