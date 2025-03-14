@@ -1,23 +1,11 @@
 const express = require('express');
+const productController = require("./../controller/product.controller");
 
 const router = express.Router();
+router.get("/", () => { });
+router.get("/:id", productController.getById);
+router.post("/", productController.create);
+router.put("/:id", () => { });
+router.delete("/:id", () => { });
 
-router.get('/', () => {
-
-});
-
-router.get('/:id', () => {
-    
-});
-
-router.post('/', () => {
-    
-});
-
-router.put('/:id', () => {
-
-});
-
-router.delete('/:id', () => {
-    
-});
+module.exports = router;

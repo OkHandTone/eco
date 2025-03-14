@@ -2,6 +2,7 @@ const { DataTypes } = require('sequelize');
 const { bdd } = require('../framework/connection');
 
 Product = bdd.define('Product', {
+    
     name: {
         type: DataTypes.STRING(255),
         allowNull: false
@@ -12,20 +13,21 @@ Product = bdd.define('Product', {
     },
     stock: {
         type: DataTypes.MEDIUMINT,
-        allowNull: false
+        allowNull: true,
+        defaultValue: 0
     },
     reference: {
         type: DataTypes.STRING(12),
-        allowNull: false
+        allowNull: true
     },
     description: {
         type: DataTypes.TEXT,
-        allowNull: false
     },
     picture: {
         type: DataTypes.STRING(2083),
         allowNull: false
     },
+
 });
 
 module.exports = Product;
